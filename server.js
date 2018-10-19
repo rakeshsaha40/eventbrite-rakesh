@@ -24,9 +24,18 @@ nunjucks.configure('views', {
 });
 app.set('view engine', 'html');
 
+// Configure our app to serve "static" assets,
+// like client-side images, js, and css out of
+// a directory called "static".
+app.use('/static', express.static('static'))
+
 // Now, attach our "controllers" to our "routes".
 app.get('/', indexControllers.index);
 
 // Start up the application and listen on the specified
 // port, or default to port 4000.
-app.listen(process.env.PORT || 4000);
+const port = process.env.PORT || 4000;
+app.listen(port, () => {
+    const hostname = process.env.C9_HOSTNAME || `localhost:${port}`;
+    console.log(`App running at http://${hostname}`);
+});

@@ -1,19 +1,27 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="/static/css/main.css">
     <title>{{title}}</title>
-  </head>
-  <body>
+</head>
+
+<body>
     <header>
-      This is the header.
+        This is the header.
     </header>
     <div>
-      {% block body %}
-      {% endblock %}
+        {% block body %}
+        {% endblock %}
     </div>
     <footer>
-      This is the footer.
+        This is the footer.
     </footer>
-  </body>
+
+    {% block late_loading_js %}
+    {% endblock %}
+
+</body>
+
 </html>
