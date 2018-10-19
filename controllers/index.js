@@ -2,7 +2,7 @@
 // handles a request, writing the response.
 function index(request, response) {
     const contextData = {
-        title: 'Eventbrite clone start',
+        title: 'Eventbrite clone project starter',
         salutation: 'Hello Yale SOM hackers',
 
     };
