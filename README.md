@@ -42,10 +42,13 @@ What are all these files, you ask? Below you'll find a description of each one -
 * `node_modules/` - the folder containing all of your dependencies.
   Usually you don't need to do anything to it, but if your app is
   misbehaving, sometimes removing and reinstalling `node_modules/`
-  by running `rm -rf node_modules/` and `npm install` or `yarn install`
-  will fix it.
-* `yarn.lock` - this describes the exact state of your `node_modules/`
-  tree without uploading the tree itself. npm modules are always being
+  by running `rm -rf node_modules/` and `npm install` 
+  will fix it. Though, you really shouldn't need to do that.
+* `package-lock.json` - this describes the exact state of your
+  `node_modules/` tree (the files in `node_modules`)
+  without uploading the tree itself (all those hundreds
+  of files). npm
+  modules are always being
   updated, so this allows you to know exactly what you're running and
   standardize this across installations.
 * `.gitignore` - this tells Git which files and folders to ignore --
