@@ -6,7 +6,7 @@
     "brace_style": "collapse-preserve-inline",
 
     // Break chained method calls across subsequent lines
-    "break_chained_methods": true,
+    "break_chained_methods": false,
 
     // End output with newline
     "end_with_newline": true,
