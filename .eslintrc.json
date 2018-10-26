@@ -4,7 +4,8 @@
         "import"
     ],
     "rules": {
-      "strict": 0,
-      "indent": ["error", 4]
-     }
+        "strict": 0,
+        "no-console": 0,
+        "indent": ["error", 4]
+    }
 }
