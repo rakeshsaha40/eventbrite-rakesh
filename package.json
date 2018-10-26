@@ -1,5 +1,5 @@
 {
-    "name": "Project-starter",
+    "name": "project-starter",
     "version": "0.1.0",
     "description": "Project starter for eventbrite clone",
     "main": "server.js",
@@ -11,16 +11,18 @@
     "devDependencies": {
         "eslint": "^5.7.0",
         "eslint-config-airbnb-base": "^13.1.0",
-        "eslint-plugin-import": "^2.14.0"
+        "eslint-plugin-import": "^2.14.0",
+        "jest": "^23.6.0",
+        "supertest": "^3.3.0"
     },
     "engines": {
         "node": "6.x || 8.x"
     },
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1",
-        "start": "if [ \"$NODE_ENV\" = \"production\" ]; then node server.js; else nodemon -e js,json,html server.js; fi",
+        "test": "jest --forceExit --detectOpenHandles",
+        "start": "node server.js",
         "lint": "eslint .",
-        "dev": "nodemon --exec \"npm run lint && npm start\""
+        "dev": "nodemon -e js,json,html --exec \"npm run lint && npm start\""
     },
     "author": "Kyle Jensen",
     "license": "UNLICENSE",
